@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Outing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9fff8;
+      color: #1b4332;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav a {
+      position: relative;
+      color: #1b4332;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 3px;
+      background: #2d6a4f;
+      transition: width 0.3s;
+      border-radius: 2px;
+      margin-top: 5px;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #2d6a4f;
+      transform: translateY(-2px);
+    }
+
+    body::before {
+      content: "";
+      display: block;
+      height: 70px;
+    }
+
+    section {
+      padding: 80px 20px 60px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      text-align: center;
+      color: #2d6a4f;
+      font-size: 2em;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form button {
+      background: #2d6a4f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    form button:hover {
+      background: #1b4332;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index2.html">Beranda</a>
+    <a href="paket.html">Paket</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="booking.html" class="active">Booking</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <section>
+    <h2>Form Booking Outing</h2>
+    <form>
+      <input type="text" placeholder="Nama Lengkap" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Nomor Telepon" required />
+      <input type="date" placeholder="Tanggal Kegiatan" required />
+      <input type="number" placeholder="Jumlah Peserta" required />
+      <textarea rows="5" placeholder="Catatan Tambahan..."></textarea>
+      <button type="submit">Kirim Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Outing Bali | Desain oleh Kamu</p>
+  </footer>
+</body>
+</html>

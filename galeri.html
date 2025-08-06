@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri Outing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9fff8;
+      color: #1b4332;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav a {
+      position: relative;
+      color: #1b4332;
+      text-decoration: none;
+      margin: 8px 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 3px;
+      background: #2d6a4f;
+      transition: width 0.3s;
+      border-radius: 2px;
+      margin-top: 5px;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #2d6a4f;
+      transform: translateY(-2px);
+    }
+
+    body::before {
+      content: "";
+      display: block;
+      height: 70px;
+    }
+
+    section {
+      padding: 80px 20px 80px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      color: #2d6a4f;
+      font-size: 2em;
+    }
+
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .galeri img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .galeri img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 0.95em;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .galeri img {
+        height: 180px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 6px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index2.html">Beranda</a>
+    <a href="paket.html">Paket</a>
+    <a href="galeri.html" class="active">Galeri</a>
+    <a href="booking.html">Booking</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <section>
+    <h2>Galeri Kegiatan</h2>
+    <div class="galeri">
+      <img src="https://www.megainsurance.co.id/po-content/uploads/wisata_pantai.jpg" alt="Pantai Bali"/>
+      <img src="https://www.teambuildingdibali.com/wp-content/uploads/2012/02/Penjelasan-Team-Building-Feature-New-2015.jpg" alt="Team building"/>
+      <img src="https://www.bukitasahbali.com/wp-content/uploads/2021/07/WhatsApp-Image-2021-03-15-at-13.23.14.jpeg" alt="Camping"/>
+      <img src="https://adv.kompas.id/wp-content/uploads/2022/06/bobocabin-1.jpg" alt="Bobocabin"/>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Outing Bali | Desain oleh Kamu</p>
+  </footer>
+
+</body>
+</html>
